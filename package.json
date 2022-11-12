@@ -2,11 +2,11 @@
   "name": "03-poj3_splitlah_v3",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./apps/server/index.js",
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "start": "cd apps/server && npm run start"
+    "start": "cd ./apps/server && npm run start"
   },
   "keywords": [],
   "author": "",
