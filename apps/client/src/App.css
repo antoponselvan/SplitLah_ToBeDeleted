@@ -1,0 +1,54 @@
+
+.read-the-docs {
+  color: #888;
+}
+
+.group-cluster {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.circle-thumbnail{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  background: #ffca57;
+  color: #383838;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.group-card {
+  align-items: center;
+}
+
+.center-button {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button-spacing {
+  padding: 20px;
+}
+
+.button-stacked {
+  display: flex;
+  flex-flow: row;
+  padding: 0.5em;
+  justify-content: center;
+}
+
+.button-padding {
+  padding: 0.5em;
+}
+
+
+
+.card-money-balance {
+  padding: 10px;
+}
+
