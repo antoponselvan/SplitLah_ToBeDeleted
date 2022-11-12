@@ -1,8 +1,11 @@
 
 const protect = async (req,res,next) => {
-    if (!req.session.userId){
+    const userId = await req.session.userId
+    console.log(userId)
+    console.log("Protect Fn Session:",req.session.session)
+    if (!userId){
         res.status(401).json({
-            msg: "Unauthorized!"
+            msg: "Unauthorized User!"
         })
         return
     }

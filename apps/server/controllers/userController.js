@@ -24,6 +24,7 @@ const registerUser = async (req,res)=>{
         } else {
             const newUser = await User.create({name, email, password})
             req.session.userId = newUser._id
+            req.session.save();
             res.status(201).json({msg:"New user registered",
             id: newUser._id,
             name: newUser.name})
@@ -55,6 +56,8 @@ const loginUser = async (req, res)=>{
         const loginPass = bcrypt.compareSync(password, user.password)
         if (loginPass){
             req.session.userId = user._id
+            await req.session.save();
+            console.log(req.session.userId)
             res.status(202).json({msg: "Successful Login", 
         id: user._id,
         name: user.name})
@@ -119,6 +122,7 @@ const logoutUser = (req, res) => {
             return
         }
         req.session.userId = null
+        req.session.save();
         res.status(202).json({msg: "User successfully logged out!"})
     }catch(error){
         console.log(error)
